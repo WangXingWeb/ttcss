@@ -1,0 +1,214 @@
+@import "./var.scss";
+
+//循环构建颜色样式工具
+//example：.text-danger .bg-warning
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+//定义边距参数
+//边距类型外边距还是内边距
+$spacing-types: (
+  m: margin,
+  p: padding,
+);
+
+$spacing-direction: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+//边距的方向
+//边距margin,padding
+@each $typeKey, $type in $spacing-types {
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}-#{$sizeKey} {
+      #{$type}: $size * $spacing-base-size;
+    }
+  }
+  // 例 px-6  p代表padding x 代表x 轴
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}x-#{$sizeKey} {
+      #{$type}-left: $size * $spacing-base-size;
+      #{$type}-right: $size * $spacing-base-size;
+    }
+  }
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}y-#{$sizeKey} {
+      #{$type}-top: $size * $spacing-base-size;
+      #{$type}-bottom: $size * $spacing-base-size;
+    }
+  }
+
+  @each $directionKey, $direction in $spacing-direction {
+    @each $sizeKey, $size in $spacing-sizes {
+      .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+        #{$type}-#{$direction}: $size * $spacing-base-size;
+      }
+    }
+  }
+}
+
+//border
+.border-a {
+  border: 1px solid $borderColor;
+}
+@each $directionKey, $direction in $spacing-direction {
+  .border-#{$directionKey} {
+    border-#{$direction}: 1px solid $borderColor;
+  }
+}
+
+//border-raduis
+@each $raduisKey, $raduis in $raduis-sizes {
+  .br-#{$raduisKey} {
+    border-radius: $raduis * $raduis-base-size;
+  }
+}
+
+//文字对齐
+@each $var in (left, right, center) {
+  .text-#{$var} {
+    text-align: $var !important;
+  }
+}
+
+//文本修饰
+@each $var in (overline, line-through, underline, blink, none) {
+  .text-#{$var} {
+    text-decoration: $var !important;
+  }
+}
+
+//字体尺寸
+@each $sizeKey, $size in $font-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size;
+  }
+}
+
+//定位
+@each $var in (absolute, relative, fixed, static, inherit) {
+  .p-#{$var} {
+    position: $var;
+  }
+}
+//弹性布局主轴方向对齐方式
+$flex-jc: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+);
+
+//弹性布局交叉轴方向对齐方式
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+);
+
+//弹性布局方向
+$flex-dir: (
+  row: row,
+  col: column,
+  rowRe: row-reverse,
+  colRe: column-reverse,
+);
+
+//弹性布局方向
+@each $key, $value in $flex-dir {
+  .flex-dir-#{$key} {
+    flex-direction: $value;
+  }
+}
+
+//弹性布局主轴方向对齐方式
+@each $key, $value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+//弹性布局交叉轴方向对齐方式
+@each $key, $value in $flex-ai {
+  .ai-#{$key} {
+    align-items: $value;
+  }
+}
+
+//长宽百分比 .h-100 height:100%
+$side-types: (
+  w: width,
+  h: height,
+); //宽度，长度
+$side-base-size: 1%;
+@each $typeKey, $type in $side-types {
+  @each $size in (100, 50, 33, 25) {
+    .#{$typeKey}-#{$size} {
+      #{$type}: $size * $side-base-size;
+    }
+  }
+}
+//盒模型
+$box-types: (
+  content: content-box,
+  border: border-box,
+);
+@each $key, $value in $box-types {
+  .box-#{$key} {
+    box-sizing: $value;
+  }
+}
+//鼠标指针样式
+//pointer：手型
+//crosshair：十字型
+//text：平时鼠标移动到文本上的样式
+//wait：等待的效果
+//default：默认的那种效果
+//help：带问号的鼠标样式
+@each $var in (pointer, crosshair, text, default, help) {
+  .cursor-#{$var} {
+    cursor: $var !important;
+  }
+}
+
+//display
+@each $var in (none, flex, grid, block, inline, inline-block, inherit) {
+  .d-#{$var} {
+    display: $var !important;
+  }
+}
+
+//弹性布局换行
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.fw-bold {
+  font-weight: bold;
+}
+//文本不换行
+.text-nowrap {
+  white-space: nowrap;
+}
+//文本超出显示省略号
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

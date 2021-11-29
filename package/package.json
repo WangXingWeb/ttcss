@@ -1,0 +1,16 @@
+{
+    "name": "ttcss",
+    "version": "0.0.1",
+    "description": "帮助你快速编写css代码的工具库",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "css",
+        "sass",
+        "less"
+    ],
+    "author": "漫卷",
+    "license": "ISC"
+}
