@@ -1,11 +1,11 @@
 ---
 home: true
 title: home
-heroImage: /assets/img/logo.png
-heroText: 漫卷
-tagline: 漫卷诗书喜欲狂
+heroImage: /assets/img/ttcss.jpeg
+heroText: TTcss
+tagline: 帮助开发者快速编写css代码的工具库
 actionText: 快速上手 →
-actionLink: /zh/guide/
+actionLink: /guide/
 features:
     - title: 简洁至上
       details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
