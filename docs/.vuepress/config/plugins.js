@@ -23,13 +23,6 @@ module.exports = {
             buttonText: "刷新",
         },
     },
-    "@vssue/vuepress-plugin-vssue": {
-        platform: "github-v4",
-        owner: "WangXingWeb",
-        repo: "Nblog",
-        autoCreateIssue: true,
-        ...secret,
-    },
     "@vuepress/plugin-back-to-top": true,
     "vuepress-plugin-auto-sidebar": {},
 };

@@ -5,17 +5,28 @@ heroImage: /assets/img/ttcss.jpeg
 heroText: TTcss
 tagline: 帮助开发者快速编写css代码的工具库
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /指南/快速上手
 features:
-    - title: 简洁至上
-      details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-    - title: Vue驱动
-      details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-    - title: 高性能
-      details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present WangXing
+    - title: 高效开发
+      details: 让开发者使用搭积木的样式编写css代码。
+    - title: 支持sass/less
+      details: 同时支持sass和less。
+    - title: 可定制
+      details: 支持自定义变量，更全满满足开发需要。
+footer: MIT Licensed | Copyright © 2021-present manjuan
 ---
 
-自动化部署 2
+### 安装
 
-![GitHub issues](https://img.shields.io/github/issues/WangXingWeb/Nblog)
+```sh
+# 安装
+yarn add ttcss
+# or
+npm install ttcss
+```
+
+### 引用
+
+```javascript
+import "ttcss/ttcss.scss";
+```
