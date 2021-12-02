@@ -1,8 +1,8 @@
 $--color-primary: teal !default;
 //常用色值
 $colors: (
-    transparent: "transparent",
-    current: "currentColor",
+    transparent: transparent,
+    current: currentColor,
     "success": $--color-primary,
     "warnning": #f2895a,
     "danger": #e26566,
