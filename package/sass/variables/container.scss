@@ -1,0 +1,9 @@
+//盒模型
+$box-types: (
+    content: content-box,
+    border: border-box
+);
+
+//display类型
+$display-types: none, flex, grid, block, inline, inline-block, inherit;
+$cursor-types: pointer, crosshair, text, default, help;

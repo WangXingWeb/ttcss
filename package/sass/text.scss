@@ -1,0 +1,22 @@
+@import './variables/index.scss';
+
+//字体尺寸
+@each $sizeKey, $size in $font-sizes {
+    .fs-#{$sizeKey} {
+        font-size: $size;
+    }
+}
+
+//对齐方式
+@each $type in $align-types {
+    .align-#{$type} {
+        text-align: $type !important;
+    }
+}
+
+//文本修饰
+@each $var in (overline, line-through, underline, blink, none) {
+    .text-#{$var} {
+        text-decoration: $var !important;
+    }
+}

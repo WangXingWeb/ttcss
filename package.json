@@ -1,12 +1,13 @@
 {
     "name": "ttcss",
     "version": "1.0.0",
-    "description": "",
+    "description": "帮助开发者快速编写css代码的工具库",
     "main": "index.js",
     "scripts": {
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs",
         "deploy": "bash deploy.sh",
+        "example:dev": "cd example && yarn serve",
         "compilesass": "cd package && sass ttcss.scss ttcss.css",
         "compileless": "cd package && lessc ttcss.less ttcss.css"
     },
@@ -14,13 +15,17 @@
         "type": "git",
         "url": "git+https://github.com/WangXingWeb/ttcss.git"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "css",
+        "sass",
+        "less"
+    ],
+    "author": "manjuan",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/WangXingWeb/ttcss/issues"
     },
-    "homepage": "https://github.com/WangXingWeb/ttcss#readme",
+    "homepage": "https://ttcss.iwangxing.cn",
     "devDependencies": {
         "@vuepress/plugin-back-to-top": "^1.8.2",
         "@vuepress/plugin-medium-zoom": "^1.8.2",

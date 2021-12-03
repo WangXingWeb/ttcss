@@ -1,0 +1,21 @@
+@import "./variables/color.scss";
+
+//example .text-danger .bg-warning
+@each $colorKey, $color in $colors {
+    .text-#{$colorKey} {
+        color: $color;
+    }
+    .bg-#{$colorKey} {
+        background-color: $color;
+    }
+
+    // 深色模式下 .dark .dark:text-danger{}
+    .dark {
+        .dark:text-#{$colorKey} {
+            color: $color;
+        }
+        .dark:bg-#{$colorKey} {
+            background-color: $color;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import './common.scss';
+
+//边距系数，实际的边距数值是它的倍数关系，我这里用px，你用rem和em也没关系
+$spacing-base-size: 10px !default;
+//边距是系数的几倍
+$spacing-sizes: (-1: -0.2, 0: 0, 1: 0.2, 2: 0.5, 3: 0.8, 4: 1, 5: 1.5, 6: 2, 7: 3) !default;
+
+//边距类型外边距还是内边距
+$spacing-types: (
+    m: margin,
+    p: padding
+) !default;
+
+//边距类型的方向
+$spacing-directions: $directions !default;

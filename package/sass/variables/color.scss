@@ -1,0 +1,18 @@
+//常用色值
+$colors: (
+    transparent: transparent,
+    current: currentColor,
+    'primary': #1890ff,
+    'success': #52c41a,
+    'warnning': #faad14,
+    'danger': #f5222d,
+    'border': #d9d9d9,
+    'white': #ffffff,
+    'black': #000000
+) !default;
+
+//边框颜色(从$colors中取)
+$borderColor: map-get(
+    $map: $colors,
+    $key: 'border'
+) !default;

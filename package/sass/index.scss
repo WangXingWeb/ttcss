@@ -1,80 +1,15 @@
-@import "./var.scss";
+@import './variables/index.scss';
 
-//循环构建颜色样式工具
-//example：.text-danger .bg-warning
-@each $colorKey, $color in $colors {
-    .text-#{$colorKey} {
-        color: $color;
-    }
-    .bg-#{$colorKey} {
-        background-color: $color;
-    }
-    .dark {
-        .dark:text-#{$colorKey} {
-            color: $color;
-        }
-        .dark:bg-#{$colorKey} {
-            background-color: $color;
-        }
-    }
-}
-
-//盒模型
-@each $boxKey, $type in $box-types {
-    .box-#{$boxKey} {
-        box-sizing: $type;
-    }
-}
-
-//定义边距参数
-//边距类型外边距还是内边距
-$spacing-types: (
-    m: margin,
-    p: padding,
-);
-
-$spacing-direction: (
-    t: top,
-    r: right,
-    b: bottom,
-    l: left,
-);
-//边距的方向
-//边距margin,padding
-@each $typeKey, $type in $spacing-types {
-    @each $sizeKey, $size in $spacing-sizes {
-        .#{$typeKey}-#{$sizeKey} {
-            #{$type}: $size * $spacing-base-size;
-        }
-    }
-    // 例 px-6  p代表padding x 代表x 轴
-    @each $sizeKey, $size in $spacing-sizes {
-        .#{$typeKey}x-#{$sizeKey} {
-            #{$type}-left: $size * $spacing-base-size;
-            #{$type}-right: $size * $spacing-base-size;
-        }
-    }
-    @each $sizeKey, $size in $spacing-sizes {
-        .#{$typeKey}y-#{$sizeKey} {
-            #{$type}-top: $size * $spacing-base-size;
-            #{$type}-bottom: $size * $spacing-base-size;
-        }
-    }
-
-    @each $directionKey, $direction in $spacing-direction {
-        @each $sizeKey, $size in $spacing-sizes {
-            .#{$typeKey}#{$directionKey}-#{$sizeKey} {
-                #{$type}-#{$direction}: $size * $spacing-base-size;
-            }
-        }
-    }
-}
+@import './color.scss';
+@import './container.scss';
+@import './space.scss';
+@import './text.scss';
 
 //border
 .border-a {
     border: 1px solid $borderColor;
 }
-@each $directionKey, $direction in $spacing-direction {
+@each $directionKey, $direction in $directions {
     .border-#{$directionKey} {
         border-#{$direction}: 1px solid $borderColor;
     }
@@ -87,24 +22,10 @@ $spacing-direction: (
     }
 }
 
-//文字对齐
-@each $var in (left, right, center) {
-    .text-#{$var} {
-        text-align: $var !important;
-    }
-}
-
 //文本修饰
 @each $var in (overline, line-through, underline, blink, none) {
     .text-#{$var} {
         text-decoration: $var !important;
-    }
-}
-
-//字体尺寸
-@each $sizeKey, $size in $font-sizes {
-    .fs-#{$sizeKey} {
-        font-size: $size;
     }
 }
 
@@ -120,7 +41,7 @@ $flex-jc: (
     end: flex-end,
     center: center,
     between: space-between,
-    around: space-around,
+    around: space-around
 );
 
 //弹性布局交叉轴方向对齐方式
@@ -128,7 +49,7 @@ $flex-ai: (
     start: flex-start,
     end: flex-end,
     center: center,
-    stretch: stretch,
+    stretch: stretch
 );
 
 //弹性布局方向
@@ -136,7 +57,7 @@ $flex-dir: (
     row: row,
     col: column,
     rowRe: row-reverse,
-    colRe: column-reverse,
+    colRe: column-reverse
 );
 
 //弹性布局方向
@@ -163,7 +84,7 @@ $flex-dir: (
 //长宽百分比 .h-100 height:100%
 $side-types: (
     w: width,
-    h: height,
+    h: height
 ); //宽度，长度
 $side-base-size: 1%;
 @each $typeKey, $type in $side-types {
@@ -173,12 +94,7 @@ $side-base-size: 1%;
         }
     }
 }
-//盒模型
-@each $key, $value in $box-types {
-    .box-#{$key} {
-        box-sizing: $value;
-    }
-}
+
 //鼠标指针样式
 //pointer：手型
 //crosshair：十字型
