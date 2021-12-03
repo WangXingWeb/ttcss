@@ -5,30 +5,6 @@
 @import './space.scss';
 @import './text.scss';
 
-//border
-.border-a {
-    border: 1px solid $borderColor;
-}
-@each $directionKey, $direction in $directions {
-    .border-#{$directionKey} {
-        border-#{$direction}: 1px solid $borderColor;
-    }
-}
-
-//border-raduis
-@each $raduisKey, $raduis in $raduis-sizes {
-    .br-#{$raduisKey} {
-        border-radius: $raduis * $raduis-base-size;
-    }
-}
-
-//文本修饰
-@each $var in (overline, line-through, underline, blink, none) {
-    .text-#{$var} {
-        text-decoration: $var !important;
-    }
-}
-
 //定位
 @each $var in (absolute, relative, fixed, static, inherit) {
     .p-#{$var} {
@@ -92,26 +68,6 @@ $side-base-size: 1%;
         .#{$typeKey}-#{$size} {
             #{$type}: $size * $side-base-size;
         }
-    }
-}
-
-//鼠标指针样式
-//pointer：手型
-//crosshair：十字型
-//text：平时鼠标移动到文本上的样式
-//wait：等待的效果
-//default：默认的那种效果
-//help：带问号的鼠标样式
-@each $var in (pointer, crosshair, text, default, help) {
-    .cursor-#{$var} {
-        cursor: $var !important;
-    }
-}
-
-//display
-@each $type in $display-types {
-    .d-#{$type} {
-        display: $type !important;
     }
 }
 
