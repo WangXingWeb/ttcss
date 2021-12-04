@@ -13,11 +13,15 @@
     }
 }
 
-//border-raduis
+//圆角border-raduis
 @each $raduisKey, $raduis in $raduis-sizes {
     .br-#{$raduisKey} {
         border-radius: $raduis * $raduis-base-size;
     }
+}
+//circle
+.br-c {
+    border-radius: 50%;
 }
 
 //鼠标指针样式
@@ -34,5 +38,12 @@
 @each $directionKey, $direction in $directions {
     .border-#{$directionKey} {
         border-#{$direction}: 1px solid $borderColor;
+    }
+}
+
+//定位
+@each $type in $postion-types {
+    .p-#{$type} {
+        position: $type;
     }
 }

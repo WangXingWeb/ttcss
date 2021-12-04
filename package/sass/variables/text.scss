@@ -11,14 +11,5 @@ $font-sizes: (
 //对齐方式类型
 $align-types: left, right, center, justify, inherit;
 
-//圆角border-raduis变量
-$raduis-sizes: (
-    0: 0,
-    1: 2,
-    2: 5,
-    3: 10,
-    4: 10,
-    5: 15,
-    6: 20
-);
-$raduis-base-size: 1px;
+//文本装饰类型  由于IE、Chrome 或 Safari 均不支持 "blink" 属性值所以这里不设置blink
+$decoration-types: overline, line-through, underline, none;

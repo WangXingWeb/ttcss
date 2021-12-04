@@ -1,17 +1,17 @@
-const Head = require("./config/head");
-const Plugins = require("./config/plugins");
-const Nav = require("./config/nav");
+const Head = require('./config/head')
+const Plugins = require('./config/plugins')
+const Nav = require('./config/nav')
 
 module.exports = {
-    base: "/",
-    title: "TTcss",
-    describe: "帮助开发者快速开发css代码的工具库",
+    base: '/',
+    title: 'TTcss',
+    describe: '帮助开发者快速开发css代码的工具库',
     head: Head,
     themeConfig: {
-        lastUpdated: "更新时间",
-        logo: "/assets/img/ttcss.jpeg",
+        lastUpdated: '更新时间',
+        //logo: '/assets/img/ttcss.png',
         navbar: true,
-        nav: Nav,
+        nav: Nav
     },
-    plugins: Plugins,
-};
+    plugins: Plugins
+}

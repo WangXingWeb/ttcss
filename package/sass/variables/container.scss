@@ -6,4 +6,20 @@ $box-types: (
 
 //display类型
 $display-types: none, flex, grid, block, inline, inline-block, inherit;
+
+//鼠标指针样式
 $cursor-types: pointer, crosshair, text, default, help;
+
+//定位 postion
+$postion-types: absolute, relative, fixed, static, inherit, sticky;
+
+//圆角border-raduis变量
+$raduis-sizes: (
+    0: 0,
+    1: 2,
+    2: 5,
+    3: 10,
+    4: 15,
+    5: 20
+);
+$raduis-base-size: 1px;

@@ -9,14 +9,16 @@
 
 //对齐方式
 @each $type in $align-types {
-    .align-#{$type} {
+    // .ta-right{text-align:right;}
+    .ta-#{$type} {
         text-align: $type !important;
     }
 }
 
 //文本修饰
-@each $var in (overline, line-through, underline, blink, none) {
-    .text-#{$var} {
-        text-decoration: $var !important;
+@each $type in $decoration-types {
+    // .td-overline{text-decoration: overline !important;}
+    .td-#{$type} {
+        text-decoration: $type !important;
     }
 }

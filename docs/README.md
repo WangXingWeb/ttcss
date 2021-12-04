@@ -1,8 +1,7 @@
 ---
 home: true
 title: home
-heroImage: /assets/img/ttcss.jpeg
-heroText: TTcss
+heroImage: /assets/img/ttcss.png
 tagline: 帮助开发者快速编写css代码的工具库
 actionText: 快速上手 →
 actionLink: /指南/快速上手
@@ -28,5 +27,5 @@ npm install ttcss
 ### 引用
 
 ```javascript
-import "ttcss/ttcss.scss";
+import 'ttcss/ttcss.scss'
 ```

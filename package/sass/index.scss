@@ -5,12 +5,6 @@
 @import './space.scss';
 @import './text.scss';
 
-//定位
-@each $var in (absolute, relative, fixed, static, inherit) {
-    .p-#{$var} {
-        position: $var;
-    }
-}
 //弹性布局主轴方向对齐方式
 $flex-jc: (
     start: flex-start,
