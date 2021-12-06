@@ -8,8 +8,8 @@
         "docs:build": "vuepress build docs",
         "deploy": "bash deploy.sh",
         "example:dev": "cd example && yarn serve",
-        "compilesass": "cd package && sass ttcss.scss ttcss.css",
-        "compileless": "cd package && lessc ttcss.less ttcss.css"
+        "compilesass": "cd package && sass sass/index.scss ttcss.css",
+        "compileless": "cd package && lessc less/index.less ttcss.css"
     },
     "repository": {
         "type": "git",
