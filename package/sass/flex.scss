@@ -1,0 +1,21 @@
+@import './variables/index.scss';
+//弹性布局方向
+@each $key, $value in $flex-dir {
+    .flex-dir-#{$key} {
+        flex-direction: $value;
+    }
+}
+
+//弹性布局主轴方向对齐方式
+@each $key, $value in $flex-jc {
+    .jc-#{$key} {
+        justify-content: $value;
+    }
+}
+
+//弹性布局交叉轴方向对齐方式
+@each $key, $value in $flex-ai {
+    .ai-#{$key} {
+        align-items: $value;
+    }
+}

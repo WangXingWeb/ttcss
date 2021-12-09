@@ -5,51 +5,11 @@
 @import './space.scss';
 @import './text.scss';
 
-//弹性布局主轴方向对齐方式
-$flex-jc: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    between: space-between,
-    around: space-around
-);
 
-//弹性布局交叉轴方向对齐方式
-$flex-ai: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    stretch: stretch
-);
 
-//弹性布局方向
-$flex-dir: (
-    row: row,
-    col: column,
-    rowRe: row-reverse,
-    colRe: column-reverse
-);
 
-//弹性布局方向
-@each $key, $value in $flex-dir {
-    .flex-dir-#{$key} {
-        flex-direction: $value;
-    }
-}
 
-//弹性布局主轴方向对齐方式
-@each $key, $value in $flex-jc {
-    .jc-#{$key} {
-        justify-content: $value;
-    }
-}
 
-//弹性布局交叉轴方向对齐方式
-@each $key, $value in $flex-ai {
-    .ai-#{$key} {
-        align-items: $value;
-    }
-}
 
 //长宽百分比 .h-100 height:100%
 $side-types: (
