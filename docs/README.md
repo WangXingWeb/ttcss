@@ -27,5 +27,5 @@ npm install ttcss
 ### 引用
 
 ```javascript
-import 'ttcss/ttcss.scss'
+import 'ttcss/sass/index.scss'
 ```

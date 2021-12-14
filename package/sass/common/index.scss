@@ -1,0 +1,18 @@
+//循环混入
+@mixin eachMixin($switch, $types, $prefix, $property) {
+    @if ($switch) {
+        @if (type-of($types) == map) {
+            @each $typeKey, $type in $types {
+                .#{$prefix}-#{$typeKey} {
+                    #{$property}: $type;
+                }
+            }
+        } @else {
+            @each $type in $types {
+                .#{$prefix}-#{$type} {
+                    #{$property}: $type;
+                }
+            }
+        }
+    }
+}

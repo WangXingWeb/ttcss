@@ -1,19 +1,22 @@
 @import './variables/index.scss';
+@import './common/index.scss';
 
 //字体尺寸
-@each $sizeKey, $size in $font-sizes {
-    .fs-#{$sizeKey} {
-        font-size: $size;
-    }
-}
+// @each $sizeKey, $size in $font-sizes {
+//     .fs-#{$sizeKey} {
+//         font-size: $size;
+//     }
+// }
+@include eachMixin($font-sizes-switch, $font-sizes, fs, font-size);
 
 //对齐方式
-@each $type in $align-types {
-    // .ta-right{text-align:right;}
-    .ta-#{$type} {
-        text-align: $type !important;
-    }
-}
+// @each $type in $align-types {
+//     // .ta-right{text-align:right;}
+//     .ta-#{$type} {
+//         text-align: $type !important;
+//     }
+// }
+@include eachMixin($align-types-switch, $align-types, ta, text-align);
 
 //文本修饰
 @each $type in $decoration-types {
@@ -22,3 +25,15 @@
         text-decoration: $type !important;
     }
 }
+@include eachMixin($decoration-types-switch, $decoration-types, td, text-decoration);
+
+//文本换行
+// @if ($word-break-switch) {
+//     @each $typeKey, $type in $word-break-types {
+//         // .break-n{word-wrap: normal;}
+//         .break-#{$typeKey} {
+//             word-break: $type;
+//         }
+//     }
+// }
+@include eachMixin($word-break-switch, $word-break-types, break, word-break);
