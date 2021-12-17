@@ -1,5 +1,5 @@
-@import "./variables/color.scss";
-
+@import './variables/color.scss';
+$opacify-size: 1%;
 //example .text-danger .bg-warning
 @each $colorKey, $color in $colors {
     .text-#{$colorKey} {
@@ -8,7 +8,6 @@
     .bg-#{$colorKey} {
         background-color: $color;
     }
-
     // 深色模式下 .dark .dark:text-danger{}
     .dark {
         .dark:text-#{$colorKey} {
@@ -16,6 +15,27 @@
         }
         .dark:bg-#{$colorKey} {
             background-color: $color;
+        }
+    }
+    //去掉关键字，只循环色值
+    @if ($color != transparent and $color != currentColor) {
+        //透明度颜色
+        @each $opacify in $opacify-types {
+            .text-#{$colorKey}-#{$opacify} {
+                color: rgba($color, $opacify-size * $opacify);
+            }
+            .bg-#{$colorKey}-#{$opacify} {
+                background-color: rgba($color, $opacify-size * $opacify);
+            }
+
+            .dark {
+                .dark:text-#{$colorKey}-#{$opacify} {
+                    color: rgba($color, $opacify-size * $opacify);
+                }
+                .dark:bg-#{$colorKey}-#{$opacify} {
+                    background-color: rgba($color, $opacify-size * $opacify);
+                }
+            }
         }
     }
 }

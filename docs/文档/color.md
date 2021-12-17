@@ -30,4 +30,6 @@ title: color
 | bg-white       | background-color: #ffffff     |
 | bg-black       | background-color: #000000     |
 
+## 透明度颜色
+
 ## 深色模式
