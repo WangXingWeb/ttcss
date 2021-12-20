@@ -9,8 +9,10 @@
                 </tr>
             </thead>
         </table>
-        <div style="width: 100px; overflow: hidden" class="break-ba bg-danger-80">
-            jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否
+        <div style="width: 100px; height: 100px" class="break-ba bg-danger-80 overflow-y-scroll">
+            jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf
+            fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk
+            kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷
         </div>
     </div>
 </template>

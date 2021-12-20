@@ -1,4 +1,5 @@
 @import './variables/index.scss';
+@import './common/index.scss';
 //盒模型
 @each $boxKey, $type in $box-types {
     .box-#{$boxKey} {
@@ -46,4 +47,10 @@
     .p-#{$type} {
         position: $type;
     }
+}
+
+//溢出
+@include eachMixin($overflow-switch, $overflow-types, overflow, overflow);
+@each $direction in $overflow-directions {
+    @include eachMixin($overflow-switch, $overflow-types, overflow- + $direction, overflow- + $direction);
 }

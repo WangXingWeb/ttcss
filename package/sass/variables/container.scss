@@ -23,3 +23,8 @@ $raduis-sizes: (
     5: 20
 );
 $raduis-base-size: 1px;
+
+//溢出
+$overflow-switch: true !default;
+$overflow-types: visible, hidden, scroll, auto;
+$overflow-directions: x, y;
