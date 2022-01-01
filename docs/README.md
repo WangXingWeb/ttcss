@@ -11,7 +11,7 @@ features:
     - title: 支持sass/less
       details: 同时支持sass和less。
     - title: 可定制
-      details: 支持自定义变量，更全满满足开发需要。
+      details: 支持自定义变量，更全面满足开发需要。
 footer: MIT Licensed | Copyright © 2021-present manjuan
 ---
 
