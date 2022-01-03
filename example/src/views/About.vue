@@ -1,11 +1,11 @@
 <template>
-    <div class="about box-border mt-5">
-        <h1 class="mt--1 fs-xl td-overline ta-left text-danger-50">This is an about page</h1>
+    <div class="about box-border mt-5 dark">
+        <h1 class="mt--1 fs-xl td-overline ta-left dark:fs-3xl dark:text-danger">This is an about page</h1>
         <table style="width: 100%">
             <thead>
                 <tr>
                     <th>dd</th>
-                    <th>德德</th>
+                    <th class="dark:text-primary">德德</th>
                 </tr>
             </thead>
         </table>

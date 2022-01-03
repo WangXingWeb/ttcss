@@ -16,3 +16,21 @@
         }
     }
 }
+//深色模式 循环混入
+@mixin eachDarkMixin($switch, $types, $prefix, $property) {
+    @if ($switch) {
+        @if (type-of($types) == map) {
+            @each $typeKey, $type in $types {
+                .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{$typeKey} {
+                    #{$property}: $type;
+                }
+            }
+        } @else {
+            @each $type in $types {
+                .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{$type} {
+                    #{$property}: $type;
+                }
+            }
+        }
+    }
+}

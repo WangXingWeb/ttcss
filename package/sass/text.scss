@@ -8,7 +8,7 @@
 //     }
 // }
 @include eachMixin($font-sizes-switch, $font-sizes, fs, font-size);
-
+@include eachDarkMixin($font-sizes-switch, $font-sizes, 'fs', font-size);
 //对齐方式
 // @each $type in $align-types {
 //     // .ta-right{text-align:right;}
