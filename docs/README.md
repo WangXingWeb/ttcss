@@ -22,6 +22,8 @@ footer: MIT Licensed | Copyright © 2021-present manjuan
 yarn add ttcss
 # or
 npm install ttcss
+# or
+pnpm install ttcss
 ```
 
 ### 引用

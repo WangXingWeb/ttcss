@@ -19,3 +19,14 @@ $borderColor: map-get(
 
 //透明度
 $opacify-types: 10, 20, 30, 40, 50, 60, 70, 80, 90 !default;
+
+//颜色开关
+$color-switch: true !default;
+//文本颜色开关
+$text-color-switch: $color-switch !default;
+//文本颜色前缀
+$text-color-prefix: text !default;
+//北京颜色开关
+$bg-color-switch: $color-switch !default;
+//背景颜色前缀
+$bg-color-prefix: bg !default;

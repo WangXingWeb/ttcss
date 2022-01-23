@@ -1,13 +1,12 @@
 @import './variables/color.scss';
+@import './common/index.scss';
 $opacify-size: 1%;
-//example .text-danger .bg-warning
+//example .text-danger
+@include eachMixin($text-color-switch, $colors, $text-color-prefix, color);
+//example .bg-warning
+@include eachMixin($bg-color-switch, $colors, $bg-color-prefix, background-color);
+
 @each $colorKey, $color in $colors {
-    .text-#{$colorKey} {
-        color: $color;
-    }
-    .bg-#{$colorKey} {
-        background-color: $color;
-    }
     // 深色模式下 .dark .dark:text-danger{}
     .#{$dark-alias} {
         .#{$dark-alias}\:text-#{$colorKey} {
