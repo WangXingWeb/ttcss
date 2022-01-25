@@ -1,4 +1,4 @@
-//循环混入
+//循环混合
 @mixin eachMixin($switch, $types, $prefix, $property) {
     @if ($switch) {
         @if (type-of($types) == map) {
@@ -16,7 +16,7 @@
         }
     }
 }
-//深色模式 循环混入
+//深色模式 循环混合
 @mixin eachDarkMixin($switch, $types, $prefix, $property) {
     @if ($switch) {
         @if (type-of($types) == map) {
@@ -29,6 +29,37 @@
             @each $type in $types {
                 .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{$type} {
                     #{$property}: $type;
+                }
+            }
+        }
+    }
+}
+
+$opacify-size: 1%; //透明度单位
+//透明度循环混合
+@mixin eachOpacifyMixin($switch, $colors, $opacify-types, $prefix, $property) {
+    @if ($switch) {
+        @each $colorKey, $color in $colors {
+            //去掉关键字，只循环色值
+            @if ($color != transparent and $color != currentColor) {
+                @each $opacify in $opacify-types {
+                    .#{$prefix}-#{$colorKey}-#{$opacify} {
+                        #{$property}: rgba($color, $opacify-size * $opacify);
+                    }
+                }
+            }
+        }
+    }
+}
+@mixin eachDarkOpacifyMixin($switch, $colors, $opacify-types, $prefix, $property) {
+    @if ($switch) {
+        @each $colorKey, $color in $colors {
+            //去掉关键字，只循环色值
+            @if ($color != transparent and $color != currentColor) {
+                @each $opacify in $opacify-types {
+                    .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{$colorKey}-#{$opacify} {
+                        #{$property}: rgba($color, $opacify-size * $opacify);
+                    }
                 }
             }
         }

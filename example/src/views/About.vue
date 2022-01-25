@@ -1,6 +1,6 @@
 <template>
-    <div class="about box-border TTdark mt-5">
-        <h1 class="mt--1 fs-xl td-overline bg-blue ta-left">This is an about page</h1>
+    <div class="about box-border mt-5">
+        <h1 class="mt--1 fs-xl td-overline bg-blue-20 ta-left">This is an about page</h1>
         <table style="width: 100%">
             <thead>
                 <tr>

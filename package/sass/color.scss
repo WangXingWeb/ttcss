@@ -1,40 +1,28 @@
 @import './variables/color.scss';
 @import './common/index.scss';
-$opacify-size: 1%;
-//example .text-danger
+
+$opacify-size: 1%; //透明度单位
+
+//文本颜色 .text-danger
 @include eachMixin($text-color-switch, $colors, $text-color-prefix, color);
-//example .bg-warning
+
+//背景色 .bg-warning
 @include eachMixin($bg-color-switch, $colors, $bg-color-prefix, background-color);
 
-@each $colorKey, $color in $colors {
-    // 深色模式下 .dark .dark:text-danger{}
-    .#{$dark-alias} {
-        .#{$dark-alias}\:text-#{$colorKey} {
-            color: $color !important;
-        }
-        .#{$dark-alias}\:bg-#{$colorKey} {
-            background-color: $color;
-        }
-    }
-    //去掉关键字，只循环色值
-    @if ($color != transparent and $color != currentColor) {
-        //透明度颜色
-        @each $opacify in $opacify-types {
-            .text-#{$colorKey}-#{$opacify} {
-                color: rgba($color, $opacify-size * $opacify);
-            }
-            .bg-#{$colorKey}-#{$opacify} {
-                background-color: rgba($color, $opacify-size * $opacify);
-            }
+//深色模式 文本颜色
+@include eachDarkMixin($dark-text-color-switch, $colors, $text-color-prefix, color);
 
-            .#{$dark-alias} {
-                .#{$dark-alias}\:text-#{$colorKey}-#{$opacify} {
-                    color: rgba($color, $opacify-size * $opacify);
-                }
-                .#{$dark-alias}\:bg-#{$colorKey}-#{$opacify} {
-                    background-color: rgba($color, $opacify-size * $opacify);
-                }
-            }
-        }
-    }
-}
+//深色模式 背景颜色
+@include eachDarkMixin($dark-bg-color-switch, $colors, $bg-color-prefix, background-color);
+
+//带透明度文本颜色
+@include eachOpacifyMixin($opacify-text-color-switch, $colors, $opacify-types, $text-color-prefix, color);
+
+//带透明度背景颜色
+@include eachOpacifyMixin($opacify-bg-color-switch, $colors, $opacify-types, $bg-color-prefix, background-color);
+
+//深色模式下带透明度文本颜色
+@include eachDarkOpacifyMixin($dark-opacify-text-color-switch, $colors, $opacify-types, $text-color-prefix, color);
+
+//深色模式下带透明度背景颜色
+@include eachDarkOpacifyMixin($dark-opacify-bg-color-switch, $colors, $opacify-types, $bg-color-prefix, background-color);

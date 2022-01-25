@@ -85,7 +85,7 @@ $text-color-switch: false; //单独禁用文本颜色
 | 前缀     | $bg-color-prefix |
 | 禁用开关 | $bg-color-switch |
 
-## 透明度颜色
+## 透明度文本颜色
 
 | class            | style                    |
 | :--------------- | :----------------------- |
@@ -143,15 +143,105 @@ $text-color-switch: false; //单独禁用文本颜色
 | text-white-70    | color: rgba(#ffffff,70%) |
 | text-white-80    | color: rgba(#ffffff,80%) |
 | text-white-90    | color: rgba(#ffffff,90%) |
-| text-black-10    | color: rgba(#000000,10)  |
-| text-black-20    | color: rgba(#000000,20)  |
-| text-black-30    | color: rgba(#000000,30)  |
-| text-black-40    | color: rgba(#000000,40)  |
-| text-black-50    | color: rgba(#000000,50)  |
-| text-black-60    | color: rgba(#000000,60)  |
-| text-black-70    | color: rgba(#000000,70)  |
-| text-black-80    | color: rgba(#000000,80)  |
-| text-black-90    | color: rgba(#000000,90)  |
+| text-black-10    | color: rgba(#000000,10%) |
+| text-black-20    | color: rgba(#000000,20%) |
+| text-black-30    | color: rgba(#000000,30%) |
+| text-black-40    | color: rgba(#000000,40%) |
+| text-black-50    | color: rgba(#000000,50%) |
+| text-black-60    | color: rgba(#000000,60%) |
+| text-black-70    | color: rgba(#000000,70%) |
+| text-black-80    | color: rgba(#000000,80%) |
+| text-black-90    | color: rgba(#000000,90%) |
+
+### 自定义
+
+| 类型               | 参数                       |
+| :----------------- | :------------------------- |
+| 颜色               | $colors                    |
+| 前缀               | $text-color-prefix         |
+| 透明度禁用开关     | $opacify-color-switch      |
+| 透明度文本颜色开关 | $opacify-text-color-switch |
+
+::: tip
+$opacify-color-switch 设置为 false 可以同时禁用透明度文本和背景色 class
+:::
+
+## 透明度背景颜色
+
+| class          | style                               |
+| :------------- | :---------------------------------- |
+| bg-primary-10  | background-color:rgba(#1890ff, 10%) |
+| bg-primary-20  | background-color:rgba(#1890ff, 20%) |
+| bg-primary-30  | background-color:rgba(#1890ff, 30%) |
+| bg-primary-40  | background-color:rgba(#1890ff, 40%) |
+| bg-primary-50  | background-color:rgba(#1890ff, 50%) |
+| bg-primary-60  | background-color:rgba(#1890ff, 60%) |
+| bg-primary-70  | background-color:rgba(#1890ff, 70%) |
+| bg-primary-80  | background-color:rgba(#1890ff, 80%) |
+| bg-primary-90  | background-color:rgba(#1890ff, 90%) |
+| bg-success-10  | background-color: rgba(#52c41a,10%) |
+| bg-success-20  | background-color: rgba(#52c41a,20%) |
+| bg-success-30  | background-color: rgba(#52c41a,30%) |
+| bg-success-40  | background-color: rgba(#52c41a,40%) |
+| bg-success-50  | background-color: rgba(#52c41a,50%) |
+| bg-success-60  | background-color: rgba(#52c41a,60%) |
+| bg-success-70  | background-color: rgba(#52c41a,70%) |
+| bg-success-80  | background-color: rgba(#52c41a,80%) |
+| bg-success-90  | background-color: rgba(#52c41a,90%) |
+| bg-warnning-10 | background-color: rgba(#faad14,10%) |
+| bg-warnning-20 | background-color: rgba(#faad14,20%) |
+| bg-warnning-30 | background-color: rgba(#faad14,30%) |
+| bg-warnning-40 | background-color: rgba(#faad14,40%) |
+| bg-warnning-50 | background-color: rgba(#faad14,50%) |
+| bg-warnning-60 | background-color: rgba(#faad14,60%) |
+| bg-warnning-70 | background-color: rgba(#faad14,70%) |
+| bg-warnning-80 | background-color: rgba(#faad14,80%) |
+| bg-warnning-90 | background-color: rgba(#faad14,90%) |
+| bg-danger-10   | background-color: rgba(#f5222d,10%) |
+| bg-danger-20   | background-color: rgba(#f5222d,20%) |
+| bg-danger-30   | background-color: rgba(#f5222d,30%) |
+| bg-danger-40   | background-color: rgba(#f5222d,40%) |
+| bg-danger-50   | background-color: rgba(#f5222d,50%) |
+| bg-danger-60   | background-color: rgba(#f5222d,60%) |
+| bg-danger-70   | background-color: rgba(#f5222d,70%) |
+| bg-danger-80   | background-color: rgba(#f5222d,80%) |
+| bg-danger-90   | background-color: rgba(#f5222d,90%) |
+| bg-border-10   | background-color: rgba(#d9d9d9,10%) |
+| bg-border-20   | background-color: rgba(#d9d9d9,20%) |
+| bg-border-30   | background-color: rgba(#d9d9d9,30%) |
+| bg-border-40   | background-color: rgba(#d9d9d9,40%) |
+| bg-border-50   | background-color: rgba(#d9d9d9,50%) |
+| bg-border-60   | background-color: rgba(#d9d9d9,60%) |
+| bg-border-70   | background-color: rgba(#d9d9d9,70%) |
+| bg-border-80   | background-color: rgba(#d9d9d9,80%) |
+| bg-border-90   | background-color: rgba(#d9d9d9,90%) |
+| bg-white-10    | background-color: rgba(#ffffff,10%) |
+| bg-white-20    | background-color: rgba(#ffffff,20%) |
+| bg-white-30    | background-color: rgba(#ffffff,30%) |
+| bg-white-40    | background-color: rgba(#ffffff,40%) |
+| bg-white-50    | background-color: rgba(#ffffff,50%) |
+| bg-white-60    | background-color: rgba(#ffffff,60%) |
+| bg-white-70    | background-color: rgba(#ffffff,70%) |
+| bg-white-80    | background-color: rgba(#ffffff,80%) |
+| bg-white-90    | background-color: rgba(#ffffff,90%) |
+| bg-black-10    | background-color: rgba(#000000,10%) |
+| bg-black-20    | background-color: rgba(#000000,20%) |
+| bg-black-30    | background-color: rgba(#000000,30%) |
+| bg-black-40    | background-color: rgba(#000000,40%) |
+| bg-black-50    | background-color: rgba(#000000,50%) |
+| bg-black-60    | background-color: rgba(#000000,60%) |
+| bg-black-70    | background-color: rgba(#000000,70%) |
+| bg-black-80    | background-color: rgba(#000000,80%) |
+| bg-black-90    | background-color: rgba(#000000,90%) |
+
+### 自定义
+
+| 类型               | 参数                     |
+| :----------------- | :----------------------- |
+| 颜色               | $colors                  |
+| 前缀               | $bg-color-prefix         |
+| 透明度禁用开关     | $opacify-color-switch    |
+| 透明度背景颜色开关 | $opacify-bg-color-switch |
 
 ## 深色模式
 
@@ -185,3 +275,13 @@ $dark-alias: 'TTdark';
     <div class="TTdark:bg-danger">在深色模式下我是红色背景</div>
 </body>
 ```
+
+### 深色模式自定义
+
+| 类型               | 参数                            |
+| :----------------- | :------------------------------ |
+| 变体名             | $dark-alias                     |
+| 深色模式文本色开关 | $dark-text-color-switch         |
+| 深色模式背景色开关 | $dark-bg-color-switch           |
+| 深色模式透明文本色 | $dark-opacify-text-color-switch |
+| 深色模式透明背景色 | $dark-opacify-bg-color-switch   |

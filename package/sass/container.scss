@@ -1,18 +1,14 @@
 @import './variables/index.scss';
 @import './common/index.scss';
+
 //盒模型
-@each $boxKey, $type in $box-types {
-    .box-#{$boxKey} {
-        box-sizing: $type;
-    }
-}
+@include eachMixin($box-switch, $box-types, $box-prefix, box-sizing);
 
 //display
-@each $type in $display-types {
-    .d-#{$type} {
-        display: $type !important;
-    }
-}
+@include eachMixin($display-switch, $display-types, $display-prefix, display);
+
+//postion
+@include eachMixin($postion-switch, $postion-types, $postion-prefix, position);
 
 //圆角border-raduis
 @each $raduisKey, $raduis in $raduis-sizes {
@@ -39,13 +35,6 @@
 @each $directionKey, $direction in $directions {
     .border-#{$directionKey} {
         border-#{$direction}: 1px solid $borderColor;
-    }
-}
-
-//定位
-@each $type in $postion-types {
-    .p-#{$type} {
-        position: $type;
     }
 }
 
