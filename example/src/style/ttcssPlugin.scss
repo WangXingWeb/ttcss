@@ -1,9 +1,9 @@
 $word-break-switch: true;
 $dark-alias: 'TTdark';
 $colors: (
-    transparent: transparent,
-    current: currentColor,
-    red: red,
-    blue: blue
+    'transparent': transparent,
+    'current': currentColor,
+    'red': red,
+    'blue': blue
 );
 @import '@/../../package/sass/index.scss';
