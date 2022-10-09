@@ -1,11 +1,13 @@
 @import './variables/index.scss';
-//弹性布局方向
-@each $key, $value in $flex-dir {
-    .flex-dir-#{$key} {
-        flex-direction: $value;
-    }
-}
+@import './common/index.scss';
 
+// @each $key, $value in $flex-dir {
+//     .flex-dir-#{$key} {
+//         flex-direction: $value;
+//     }
+// }
+//弹性布局方向
+@include eachMixin($flex-switch,$flex-dir, $flex-dir-prefix, flex-direction);
 //弹性布局主轴方向对齐方式
 @each $key, $value in $flex-jc {
     .jc-#{$key} {

@@ -1,3 +1,14 @@
+//flex布局开关
+$flex-switch: true !default;
+//flex 布局方向前缀
+$flex-dir-prefix:flex-dir !default;
+//弹性布局方向
+$flex-dir: (
+    row: row,
+    col: column,
+    rowRe: row-reverse,
+    colRe: column-reverse
+);
 //弹性布局主轴方向对齐方式
 $flex-jc: (
     start: flex-start,
@@ -15,10 +26,3 @@ $flex-ai: (
     stretch: stretch
 );
 
-//弹性布局方向
-$flex-dir: (
-    row: row,
-    col: column,
-    rowRe: row-reverse,
-    colRe: column-reverse
-);

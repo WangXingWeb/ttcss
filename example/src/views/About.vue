@@ -14,6 +14,11 @@
             fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk
             kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷
         </div>
+
+        <div class="d-flex flex-dir-col">
+            <div>ddd</div>
+            <div>444</div>
+        </div>
     </div>
 </template>
 <style lang="scss">
