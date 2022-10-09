@@ -9,6 +9,8 @@ $flex-dir: (
     rowRe: row-reverse,
     colRe: column-reverse
 );
+//弹性布局主轴方向对齐方式前缀
+$flex-jc-prefix:jc !default;
 //弹性布局主轴方向对齐方式
 $flex-jc: (
     start: flex-start,
@@ -17,7 +19,8 @@ $flex-jc: (
     between: space-between,
     around: space-around
 );
-
+//弹性布局交叉轴方向对齐方式前缀
+$flex-ai-prefix:ai !default;
 //弹性布局交叉轴方向对齐方式
 $flex-ai: (
     start: flex-start,

@@ -9,15 +9,7 @@
 //弹性布局方向
 @include eachMixin($flex-switch,$flex-dir, $flex-dir-prefix, flex-direction);
 //弹性布局主轴方向对齐方式
-@each $key, $value in $flex-jc {
-    .jc-#{$key} {
-        justify-content: $value;
-    }
-}
-
+@include eachMixin($flex-switch,$flex-jc, $flex-jc-prefix, justify-content);
 //弹性布局交叉轴方向对齐方式
-@each $key, $value in $flex-ai {
-    .ai-#{$key} {
-        align-items: $value;
-    }
-}
+@include eachMixin($flex-switch,$flex-ai, $flex-ai-prefix, align-items);
+
