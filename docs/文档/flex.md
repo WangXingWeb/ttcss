@@ -16,6 +16,7 @@ title: 弹性布局
 | 类型 | 参数             |
 | :--- | :--------------- |
 | 开关 | $flex-switch     |
+| 类型 | $flex-dir        |
 | 前缀 | $flex-dir-prefix |
 
 ## 弹性布局主轴方向对齐方式
@@ -33,6 +34,7 @@ title: 弹性布局
 | 类型 | 参数            |
 | :--- | :-------------- |
 | 开关 | $flex-switch    |
+| 类型 | $flex-jc        |
 | 前缀 | $flex-jc-prefix |
 
 ## 弹性布局交叉轴方向对齐方式前缀
@@ -49,4 +51,23 @@ title: 弹性布局
 | 类型 | 参数            |
 | :--- | :-------------- |
 | 开关 | $flex-switch    |
+| 类型 | $flex-ai        |
 | 前缀 | $flex-ai-prefix |
+
+## 弹性布局折行方式
+
+| class      | style                    |
+| :--------- | :----------------------- |
+| flex-w-n   | flex-wrap: nowrap;       |
+| flex-w-w   | flex-wrap: wrap;         |
+| flex-w-w-r | flex-wrap: wrap-reverse; |
+| flex-w-int | flex-wrap: initial;      |
+| flex-w-inh | flex-wrap: inherit;      |
+
+### 自定义
+
+| 类型     | 参数            |
+| :------- | :-------------- |
+| 开关     | $flex-switch    |
+| 折行类型 | $flex-wrap-type |
+| 前缀     | $flex-ai-prefix |

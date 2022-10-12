@@ -1,15 +1,19 @@
 @import './variables/index.scss';
 @import './common/index.scss';
 
-// @each $key, $value in $flex-dir {
-//     .flex-dir-#{$key} {
-//         flex-direction: $value;
-//     }
-// }
 //弹性布局方向
-@include eachMixin($flex-switch,$flex-dir, $flex-dir-prefix, flex-direction);
+@include eachMixin($flex-switch, $flex-dir, $flex-dir-prefix, flex-direction);
 //弹性布局主轴方向对齐方式
-@include eachMixin($flex-switch,$flex-jc, $flex-jc-prefix, justify-content);
+@include eachMixin($flex-switch, $flex-jc, $flex-jc-prefix, justify-content);
 //弹性布局交叉轴方向对齐方式
-@include eachMixin($flex-switch,$flex-ai, $flex-ai-prefix, align-items);
+@include eachMixin($flex-switch, $flex-ai, $flex-ai-prefix, align-items);
+//flex折行方式
+@include eachMixin($flex-switch, $flex-wrap-type, $flex-wrap-prefix, flex-wrap);
 
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}

@@ -4,7 +4,7 @@ $directions: (
     r: right,
     b: bottom,
     l: left
-);
+) !default;
 
 //深色模式变体名称
 $dark-alias: 'dark' !default;

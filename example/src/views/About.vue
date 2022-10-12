@@ -15,7 +15,7 @@
             kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷
         </div>
 
-        <div class="d-flex flex-dir-row jc-end ai-center">
+        <div class="d-flex flex-dir-row jc-end ai-center flex-w-w">
             <div>ddd</div>
             <div>444<br />ee</div>
         </div>
