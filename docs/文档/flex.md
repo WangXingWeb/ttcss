@@ -71,3 +71,39 @@ title: 弹性布局
 | 开关     | $flex-switch    |
 | 折行类型 | $flex-wrap-type |
 | 前缀     | $flex-ai-prefix |
+
+## flex-grow
+
+| class    | style         |
+| :------- | :------------ |
+| flex-g-1 | flex-grow: 1; |
+| flex-g-2 | flex-grow: 2; |
+| flex-g-3 | flex-grow: 3; |
+| flex-g-4 | flex-grow: 4; |
+| flex-g-5 | flex-grow: 5; |
+
+### 自定义
+
+| 类型  | 参数             |
+| :---- | :--------------- |
+| 开关  | $flex-switch     |
+| sizes | $flex-grow-sizes |
+| 前缀  | $flex-g          |
+
+## flex-shrink
+
+| class    | style           |
+| :------- | :-------------- |
+| flex-s-1 | flex-shrink: 1; |
+| flex-s-2 | flex-shrink: 2; |
+| flex-s-3 | flex-shrink: 3; |
+| flex-s-4 | flex-shrink: 4; |
+| flex-s-5 | flex-shrink: 5; |
+
+### 自定义
+
+| 类型  | 参数               |
+| :---- | :----------------- |
+| 开关  | $flex-switch       |
+| sizes | $flex-shrink-sizes |
+| 前缀  | $flex-s            |

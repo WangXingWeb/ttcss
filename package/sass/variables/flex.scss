@@ -38,3 +38,13 @@ $flex-wrap-type: (
     inh: inherit
 ) !default;
 $flex-wrap-prefix: flex-w !default;
+
+$flex-sizes: 1, 2, 3, 4, 5 !default;
+//flex-grow
+$flex-grow-sizes: $flex-sizes !default;
+//flex-grow前缀
+$flex-grow-prefix: flex-g !default;
+//flex-shrink
+$flex-shrink-sizes: $flex-sizes !default;
+//flex-shrink前缀
+$flex-shrink-prefix: flex-s !default;

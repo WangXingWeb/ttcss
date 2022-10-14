@@ -15,14 +15,24 @@
             kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷
         </div>
 
-        <div class="d-flex flex-dir-row jc-end ai-center flex-w-w">
-            <div>ddd</div>
-            <div>444<br />ee</div>
+        <div style="width:120px;"  class="d-flex">
+            <div style="width:100px;" class="flex-s-1 bg-red">ddd</div>
+            <div style="width:100px;" class="flex-s-2 bg-blue">eee</div>
         </div>
     </div>
 </template>
+<script>
+
+export default{
+    methods:{
+        fun(){
+            console.log('','');
+            
+        }
+    }
+}</script>
 <style lang="scss">
 .test {
     background-color: rgba(#000000, 40%);
 }
-</style>
+</styl>

@@ -9,11 +9,12 @@
 @include eachMixin($flex-switch, $flex-ai, $flex-ai-prefix, align-items);
 //flex折行方式
 @include eachMixin($flex-switch, $flex-wrap-type, $flex-wrap-prefix, flex-wrap);
+//flex-grow
+@include eachMixin($flex-switch, $flex-grow-sizes, $flex-grow-prefix, flex-grow);
+//flex-shrink
+@include eachMixin($flex-switch, $flex-shrink-sizes, $flex-shrink-prefix, flex-shrink);
 
+//适配老版本保留flex-1，
 .flex-1 {
     flex: 1;
-}
-
-.flex-2 {
-    flex: 2;
 }
