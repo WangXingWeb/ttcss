@@ -3,7 +3,7 @@
     @if ($switch) {
         @if (type-of($types) == map) {
             @each $typeKey, $type in $types {
-                .#{$prefix}-#{$typeKey} {
+                .#{$prefix}-#{'' + $typeKey} {
                     #{$property}: $type;
                 }
             }
@@ -21,7 +21,7 @@
     @if ($switch) {
         @if (type-of($types) == map) {
             @each $typeKey, $type in $types {
-                .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{$typeKey} {
+                .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{'' + $typeKey} {
                     #{$property}: $type;
                 }
             }
@@ -43,7 +43,7 @@ $opacify-size: 1%; //透明度单位
             //去掉关键字，只循环色值
             @if ($color != transparent and $color != currentColor) {
                 @each $opacify in $opacify-types {
-                    .#{$prefix}-#{$colorKey}-#{$opacify} {
+                    .#{$prefix}-#{'' + $colorKey}-#{$opacify} {
                         #{$property}: rgba($color, $opacify-size * $opacify);
                     }
                 }
@@ -57,7 +57,7 @@ $opacify-size: 1%; //透明度单位
             //去掉关键字，只循环色值
             @if ($color != transparent and $color != currentColor) {
                 @each $opacify in $opacify-types {
-                    .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{$colorKey}-#{$opacify} {
+                    .#{$dark-alias} .#{$dark-alias}\:#{$prefix}-#{'' + $colorKey}-#{$opacify} {
                         #{$property}: rgba($color, $opacify-size * $opacify);
                     }
                 }
