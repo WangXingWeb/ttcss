@@ -17,6 +17,7 @@ $postion-switch: true !default; //postion开关
 $postion-prefix: p !default; //postion前缀
 
 //圆角border-raduis
+
 $raduis-sizes: (
     0: 0,
     1: 2,
@@ -25,10 +26,14 @@ $raduis-sizes: (
     4: 15,
     5: 20
 ) !default;
+$raduis-switch: true !default; //border-raduis开关
 $raduis-base-size: 1px !default;
+$raduis-prefix: br !default;
 
 //鼠标指针样式
 $cursor-types: pointer, crosshair, text, default, help !default;
+$cursor-switch: true !default; //border-raduis开关
+$cursor-prefix: cursor !default;
 
 //溢出
 $overflow-switch: true !default;

@@ -11,22 +11,14 @@
 @include eachMixin($postion-switch, $postion-types, $postion-prefix, position);
 
 //圆角border-raduis
-@each $raduisKey, $raduis in $raduis-sizes {
-    .br-#{$raduisKey} {
-        border-radius: $raduis * $raduis-base-size;
-    }
-}
+@include eachMixinUnit($raduis-switch, $raduis-sizes, $raduis-prefix, border-radius, $raduis-base-size);
+
 //circle
 .br-c {
     border-radius: 50%;
 }
-
-//鼠标指针样式
-@each $type in $cursor-types {
-    .cursor-#{$type} {
-        cursor: $type !important;
-    }
-}
+//cursor 鼠标指针样式
+@include eachMixin($cursor-switch, $cursor-types, $cursor-prefix, cursor);
 
 //边框border
 .border-a {

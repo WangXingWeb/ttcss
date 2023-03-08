@@ -16,6 +16,25 @@
         }
     }
 }
+//循环混合带单位
+@mixin eachMixinUnit($switch, $types, $prefix, $property, $unit) {
+    @if ($switch) {
+        @if (type-of($types) == map) {
+            @each $typeKey, $type in $types {
+                .#{$prefix}-#{'' + $typeKey} {
+                    #{$property}: $type * $unit;
+                }
+            }
+        } @else {
+            @each $type in $types {
+                .#{$prefix}-#{$type} {
+                    #{$property}: $type * $unit;
+                }
+            }
+        }
+    }
+}
+
 //深色模式 循环混合
 @mixin eachDarkMixin($switch, $types, $prefix, $property) {
     @if ($switch) {

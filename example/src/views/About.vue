@@ -19,6 +19,7 @@
             <div style="width:100px;" class="flex-s-1 bg-red">ddd</div>
             <div style="width:100px;" class="flex-s-2 bg-blue">eee</div>
         </div>
+        <div style="width:100px;height:100px;" class="bg-red br-3 cursor-help">ddd</div>
     </div>
 </template>
 <script>
