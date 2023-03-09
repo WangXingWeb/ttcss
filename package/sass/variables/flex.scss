@@ -1,50 +1,66 @@
 //flex布局开关
 $flex-switch: true !default;
 //flex 布局方向前缀
-$flex-dir-prefix: flex-dir !default;
+$flex-dir-prefix: flex-d !default;
 //弹性布局方向
 $flex-dir: (
-    row: row,
-    col: column,
-    rowRe: row-reverse,
-    colRe: column-reverse
+    r: row,
+    c: column,
+    rr: row-reverse,
+    cr: column-reverse
 ) !default;
+
 //弹性布局主轴方向对齐方式前缀
 $flex-jc-prefix: jc !default;
+//弹性布局主轴方向对齐方式开关
+$flex-jc-prefix: $flex-switch !default;
 //弹性布局主轴方向对齐方式
 $flex-jc: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    between: space-between,
-    around: space-around
+    fs: flex-start,
+    fe: flex-end,
+    c: center,
+    sb: space-between,
+    sa: space-around,
+    se: space-evenly
 ) !default;
+
 //弹性布局交叉轴方向对齐方式前缀
 $flex-ai-prefix: ai !default;
+//弹性布局交叉方向对齐方式开关
+$flex-ai-prefix: $flex-switch !default;
 //弹性布局交叉轴方向对齐方式
 $flex-ai: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    stretch: stretch
+    fs: flex-start,
+    fe: flex-end,
+    c: center,
+    s: stretch,
+    b: baseline
 ) !default;
 
 //flex折行方式
 $flex-wrap-type: (
     n: nowrap,
     w: wrap,
-    w-r: wrap-reverse,
-    int: initial,
-    inh: inherit
+    wr: wrap-reverse
 ) !default;
+//flex折行方式开关
+$flex-wrap-prefix: $flex-switch !default;
+//flex折行方式前缀
 $flex-wrap-prefix: flex-w !default;
 
+//默认比例
 $flex-sizes: 1, 2, 3, 4, 5 !default;
+
 //flex-grow
 $flex-grow-sizes: $flex-sizes !default;
+//flex-grow开关
+$flex-grow-switch: $flex-switch !default;
 //flex-grow前缀
 $flex-grow-prefix: flex-g !default;
+
 //flex-shrink
 $flex-shrink-sizes: $flex-sizes !default;
+//flex-shrink
+$flex-shrink-switch: $flex-switch !default;
 //flex-shrink前缀
 $flex-shrink-prefix: flex-s !default;

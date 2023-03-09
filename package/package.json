@@ -1,6 +1,6 @@
 {
     "name": "ttcss",
-    "version": "0.0.17",
+    "version": "0.1.1",
     "description": "帮助开发者快速编写css代码的工具库",
     "main": "index.js",
     "scripts": {
