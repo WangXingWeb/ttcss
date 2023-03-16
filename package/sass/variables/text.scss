@@ -9,14 +9,27 @@ $font-sizes: (
     3xl: 22px,
     4xl: 24px
 ) !default;
+$font-size-prefix: fs !default;
 
 //对齐方式类型
-$align-types-switch: true !default;
-$align-types: left, right, center, justify, inherit !default;
+$text-align-switch: true !default;
+$text-align-types: (
+    l: left,
+    r: right,
+    c: center,
+    j: justify
+) !default;
+$text-align-prefix: ta !default;
 
 //文本装饰类型  由于IE、Chrome 或 Safari 均不支持 "blink" 属性值所以这里不设置blink
-$decoration-types-switch: true !default;
-$decoration-types: overline, line-through, underline, none !default;
+$text-decoration-switch: true !default;
+$text-decoration-types: (
+    o: overline,
+    l: line-through,
+    u: underline,
+    n: none
+) !default;
+$text-decoration-prefix: td !default;
 
 //文本换行
 $word-break-switch: true !default;
@@ -25,3 +38,4 @@ $word-break-types: (
     ba: break-all,
     bw: break-word
 ) !default;
+$word-break-prefix: wb !default;

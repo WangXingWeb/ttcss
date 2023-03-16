@@ -2,13 +2,13 @@
 @import './common/index.scss';
 
 //弹性布局方向
-@include eachMixin($flex-switch, $flex-dir, $flex-dir-prefix, flex-direction);
+@include eachMixin($flex-dir-switch, $flex-dir-types, $flex-dir-prefix, flex-direction);
 //弹性布局主轴方向对齐方式
-@include eachMixin($flex-jc-prefix, $flex-jc, $flex-jc-prefix, justify-content);
+@include eachMixin($flex-jc-prefix, $flex-jc-types, $flex-jc-prefix, justify-content);
 //弹性布局交叉轴方向对齐方式
-@include eachMixin($flex-ai-switch, $flex-ai, $flex-ai-prefix, align-items);
+@include eachMixin($flex-ai-switch, $flex-ai-types, $flex-ai-prefix, align-items);
 //flex折行方式
-@include eachMixin($flex-wrap-switch, $flex-wrap-type, $flex-wrap-prefix, flex-wrap);
+@include eachMixin($flex-wrap-switch, $flex-wrap-types, $flex-wrap-prefix, flex-wrap);
 //flex-grow
 @include eachMixin($flex-grow-switch, $flex-grow-sizes, $flex-grow-prefix, flex-grow);
 //flex-shrink

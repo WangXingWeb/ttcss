@@ -7,8 +7,8 @@
 //         font-size: $size;
 //     }
 // }
-@include eachMixin($font-sizes-switch, $font-sizes, fs, font-size);
-@include eachDarkMixin($font-sizes-switch, $font-sizes, 'fs', font-size);
+@include eachMixin($font-sizes-switch, $font-sizes, $font-size-prefix, font-size);
+@include eachDarkMixin($font-sizes-switch, $font-sizes, $font-size-prefix, font-size);
 //对齐方式
 // @each $type in $align-types {
 //     // .ta-right{text-align:right;}
@@ -16,24 +16,10 @@
 //         text-align: $type !important;
 //     }
 // }
-@include eachMixin($align-types-switch, $align-types, ta, text-align);
+@include eachMixin($text-align-switch, $text-align-types, $text-align-prefix, text-align);
 
 //文本修饰
-@each $type in $decoration-types {
-    // .td-overline{text-decoration: overline !important;}
-    .td-#{$type} {
-        text-decoration: $type !important;
-    }
-}
-@include eachMixin($decoration-types-switch, $decoration-types, td, text-decoration);
+@include eachMixin($text-decoration-switch, $text-decoration-types, $text-decoration-prefix, text-decoration);
 
 //文本换行
-// @if ($word-break-switch) {
-//     @each $typeKey, $type in $word-break-types {
-//         // .break-n{word-wrap: normal;}
-//         .break-#{$typeKey} {
-//             word-break: $type;
-//         }
-//     }
-// }
-@include eachMixin($word-break-switch, $word-break-types, break, word-break);
+@include eachMixin($word-break-switch, $word-break-types, $word-break-prefix, word-break);
