@@ -1,6 +1,6 @@
 //文字大小
-$font-sizes-switch: true !default;
-$font-sizes: (
+$font-size-switch: true !default;
+$font-size-types: (
     s: 12px,
     m: 14px,
     l: 16px,
@@ -10,6 +10,12 @@ $font-sizes: (
     4xl: 24px
 ) !default;
 $font-size-prefix: fs !default;
+
+//font-weight开关
+$font-weight-switch: true !default;
+//font-weight类型
+$font-weight-types: 100, 200, 300, 400, 500, 600, 700, 800, 900 !default;
+$font-weight-prefix: fw !default;
 
 //对齐方式类型
 $text-align-switch: true !default;

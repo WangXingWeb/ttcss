@@ -7,15 +7,12 @@
 //         font-size: $size;
 //     }
 // }
-@include eachMixin($font-sizes-switch, $font-sizes, $font-size-prefix, font-size);
-@include eachDarkMixin($font-sizes-switch, $font-sizes, $font-size-prefix, font-size);
+@include eachMixin($font-size-switch, $font-size-types, $font-size-prefix, font-size);
+
+//字体粗细
+@include eachMixin($font-weight-switch, $font-weight-types, $font-weight-prefix, font-weight);
+
 //对齐方式
-// @each $type in $align-types {
-//     // .ta-right{text-align:right;}
-//     .ta-#{$type} {
-//         text-align: $type !important;
-//     }
-// }
 @include eachMixin($text-align-switch, $text-align-types, $text-align-prefix, text-align);
 
 //文本修饰

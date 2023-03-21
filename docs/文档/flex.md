@@ -69,14 +69,14 @@ title: 弹性布局
 
 ## 弹性布局折行方式
 
-| class     | style                    |
-| :-------- | :----------------------- |
-| flex-w-n  | flex-wrap: nowrap;       |
-| flex-w-w  | flex-wrap: wrap;         |
-| flex-w-wr | flex-wrap: wrap-reverse; |
+| class | style                    |
+| :---- | :----------------------- |
+| fw-n  | flex-wrap: nowrap;       |
+| fw-w  | flex-wrap: wrap;         |
+| fw-wr | flex-wrap: wrap-reverse; |
 
 ::: tip
-这里没有使用 fw 这个前缀时因为会和 font-weight 的 fw 冲突
+这里的 fw 这个前缀时和 font-weight 的 fw 一样但是并不会互相影响，因为他它们的值不一致，例如 fw-600 为 font-weight：600；fw-w 为 flex-wrap：wrap；
 :::
 
 ### 自定义
@@ -112,13 +112,13 @@ $flex-grow-sizes和$flex-shrink-sizes 默认继承$flex-sizes 的值
 
 ## flex-shrink 弹性盒子的收缩比率
 
-| class    | style           |
-| :------- | :-------------- |
-| flex-s-1 | flex-shrink: 1; |
-| flex-s-2 | flex-shrink: 2; |
-| flex-s-3 | flex-shrink: 3; |
-| flex-s-4 | flex-shrink: 4; |
-| flex-s-5 | flex-shrink: 5; |
+| class | style           |
+| :---- | :-------------- |
+| fs-1  | flex-shrink: 1; |
+| fs-2  | flex-shrink: 2; |
+| fs-3  | flex-shrink: 3; |
+| fs-4  | flex-shrink: 4; |
+| fs-5  | flex-shrink: 5; |
 
 ### 自定义
 
@@ -129,5 +129,5 @@ $flex-grow-sizes和$flex-shrink-sizes 默认继承$flex-sizes 的值
 | 前缀  | $flex-s             |
 
 ::: tip
-这里没有使用 fs 这个前缀时因为会和 font-size 的 fs 冲突
+与上面的 fs 一样，这里 fs 这个前缀和 font-size 的 fs 一样，但并不影响我们正常使用
 :::

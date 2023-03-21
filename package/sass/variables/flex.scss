@@ -48,7 +48,7 @@ $flex-wrap-types: (
 //flex折行方式开关
 $flex-wrap-switch: $flex-switch !default;
 //flex折行方式前缀
-$flex-wrap-prefix: flex-w !default;
+$flex-wrap-prefix: fw !default;
 
 //默认比例
 $flex-sizes: 1, 2, 3, 4, 5 !default;
@@ -65,4 +65,4 @@ $flex-shrink-sizes: $flex-sizes !default;
 //flex-shrink
 $flex-shrink-switch: $flex-switch !default;
 //flex-shrink前缀
-$flex-shrink-prefix: flex-s !default;
+$flex-shrink-prefix: fs !default;
