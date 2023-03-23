@@ -29,6 +29,10 @@ $colors: (
 );
 ```
 
+::: tip
+别忘了 transparent 和 currentColor 这两个关键字
+:::
+
 ### 自定义前缀
 
 ttcss 所有的 class 前缀支持修改
@@ -44,10 +48,6 @@ $text-color-prefix: c;
 <div class="c-red">我是红色字</div>
 ```
 
-::: tip
-别忘了 transparent 和 currentColor 这两个关键字
-:::
-
 ### 自定义开启
 
 ttcss 支持自定义禁用某一类 class，如果某一类 class 你在开发中不会使用到，可以设置禁用这类 class，这样 sass 和 less 就不会不会编译生成相关的代码，可以帮助你压缩代码，更轻量化。
@@ -62,6 +62,29 @@ $text-color-switch: false; //单独禁用文本颜色
 ::: tip
 上面已经将自定义类型、自定义前缀、自定义开启单独做了说明。ttcss 默认每个类型的 class 都支持上述的自定义规则，后续其他各类设置本文将直接使用表格列出所需修改的参数，不再单独说明。
 :::
+
+### 自定义参数
+
+| 类型         |        参数        |                 默认值 |
+| :----------- | :----------------: | ---------------------: |
+| 颜色         |      $colors       |             见下图代码 |
+| 颜色开关     |   $colors-switch   |                   true |
+| 文本颜色前缀 | $text-color-prefix |                   text |
+| 文本颜色开关 | $text-color-switch | 继承$color-switch:true |
+
+```scss
+$colors: (
+    'transparent': transparent,
+    'current': currentColor,
+    'primary': #1890ff,
+    'success': #52c41a,
+    'warnning': #faad14,
+    'danger': #f5222d,
+    'border': #d9d9d9,
+    'white': #ffffff,
+    'black': #000000
+) !default;
+```
 
 ## 背景颜色
 
@@ -79,13 +102,12 @@ $text-color-switch: false; //单独禁用文本颜色
 
 ### 自定义
 
-| 类型     | 参数             |
-| :------- | :--------------- |
-| 颜色     | $colors          |
-| 前缀     | $bg-color-prefix |
-| 禁用开关 | $bg-color-switch |
+| 类型       | 参数             |                 默认值 |
+| :--------- | :--------------- | ---------------------: |
+| 背景色前缀 | $bg-color-prefix |                     bg |
+| 背景色开关 | $bg-color-switch | 继承$color-switch:true |
 
-## 透明度文本颜色
+## 透明文本颜色
 
 | class            | style                    |
 | :--------------- | :----------------------- |
@@ -155,18 +177,16 @@ $text-color-switch: false; //单独禁用文本颜色
 
 ### 自定义
 
-| 类型               | 参数                       |
-| :----------------- | :------------------------- |
-| 颜色               | $colors                    |
-| 前缀               | $text-color-prefix         |
-| 透明度禁用开关     | $opacify-color-switch      |
-| 透明度文本颜色开关 | $opacify-text-color-switch |
+| 类型               | 参数                       |                         默认值 |
+| :----------------- | :------------------------- | -----------------------------: |
+| 透明度禁用开关     | $opacify-color-switch      |         继承$color-switch:true |
+| 透明度文本颜色开关 | $opacify-text-color-switch | 继承$opacify-color-switch:true |
 
 ::: tip
 $opacify-color-switch 设置为 false 可以同时禁用透明度文本和背景色 class
 :::
 
-## 透明度背景颜色
+## 透明背景颜色
 
 | class          | style                               |
 | :------------- | :---------------------------------- |
@@ -236,18 +256,15 @@ $opacify-color-switch 设置为 false 可以同时禁用透明度文本和背景
 
 ### 自定义
 
-| 类型               | 参数                     |
-| :----------------- | :----------------------- |
-| 颜色               | $colors                  |
-| 前缀               | $bg-color-prefix         |
-| 透明度禁用开关     | $opacify-color-switch    |
-| 透明度背景颜色开关 | $opacify-bg-color-switch |
+| 类型               | 参数                     |                         默认值 |
+| :----------------- | :----------------------- | -----------------------------: |
+| 透明度背景颜色开关 | $opacify-bg-color-switch | 继承$opacify-color-switch:true |
 
 ## 深色模式
 
 以上的文本颜色、背景颜色和透明度颜色，ttcss 都设置了对应的深色模式下的样式，只需要加`dark:`变体即可
 
-下面表格只列举部分 class，其他的以此类推
+下面表格只列举部分 class，其它的以此类推
 
 | class                 | style                                                  |
 | :-------------------- | :----------------------------------------------------- |
@@ -278,10 +295,10 @@ $dark-alias: 'TTdark';
 
 ### 深色模式自定义
 
-| 类型               | 参数                            |
-| :----------------- | :------------------------------ |
-| 变体名             | $dark-alias                     |
-| 深色模式文本色开关 | $dark-text-color-switch         |
-| 深色模式背景色开关 | $dark-bg-color-switch           |
-| 深色模式透明文本色 | $dark-opacify-text-color-switch |
-| 深色模式透明背景色 | $dark-opacify-bg-color-switch   |
+| 类型               | 参数                            |                         默认值 |
+| :----------------- | :------------------------------ | -----------------------------: |
+| 变体名             | $dark-alias                     |                           dark |
+| 深色模式文本色开关 | $dark-text-color-switch         |         继承$text-color-switch |
+| 深色模式背景色开关 | $dark-bg-color-switch           |           继承$bg-color-switch |
+| 深色模式透明文本色 | $dark-opacify-text-color-switch | 继承$opacify-text-color-switch |
+| 深色模式透明背景色 | $dark-opacify-bg-color-switch   |   继承$opacify-bg-color-switch |
