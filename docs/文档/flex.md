@@ -13,12 +13,21 @@ title: 弹性布局
 
 ### 自定义
 
-| 类型        | 参数             |
-| :---------- | :--------------- |
-| flex 总开关 | $flex-switch     |
-| 开关        | $flex-dir-switch |
-| 类型        | $flex-dir-types  |
-| 前缀        | $flex-dir-prefix |
+| 类型        | 参数             |           默认值 |
+| :---------- | :--------------- | ---------------: |
+| flex 总开关 | $flex-switch     | ---------------: |
+| 开关        | $flex-dir-switch | 继承$flex-switch |
+| 类型        | $flex-dir-types  |       见下图代码 |
+| 前缀        | $flex-dir-prefix |               fd |
+
+```scss
+$flex-dir-types: (
+    r: row,
+    c: column,
+    rr: row-reverse,
+    cr: column-reverse
+) !default;
+```
 
 ::: tip
 注意 flex 所有相关的开关都默认继承了$flex-switch 的值
@@ -39,11 +48,22 @@ title: 弹性布局
 
 ### 自定义
 
-| 类型 | 参数            |
-| :--- | :-------------- |
-| 开关 | $flex-jc-switch |
-| 类型 | $flex-jc-types  |
-| 前缀 | $flex-jc-prefix |
+| 类型 | 参数            |           默认值 |
+| :--- | :-------------- | ---------------: |
+| 开关 | $flex-jc-switch | 继承$flex-switch |
+| 类型 | $flex-jc-types  |       见下图代码 |
+| 前缀 | $flex-jc-prefix |               jc |
+
+```scss
+$flex-jc-types: (
+    fs: flex-start,
+    fe: flex-end,
+    c: center,
+    sb: space-between,
+    sa: space-around,
+    se: space-evenly
+) !default;
+```
 
 ::: tip
 注意$flex-jc-switch 及下文有关 flex 的 class 的开关默认跟随 flex-switch
@@ -61,11 +81,21 @@ title: 弹性布局
 
 ### 自定义
 
-| 类型 | 参数            |
-| :--- | :-------------- |
-| 开关 | $flex-ai-switch |
-| 类型 | $flex-ai-types  |
-| 前缀 | $flex-ai-prefix |
+| 类型 | 参数            |           默认值 |
+| :--- | :-------------- | ---------------: |
+| 开关 | $flex-ai-switch | 继承$flex-switch |
+| 类型 | $flex-ai-types  |       见下图代码 |
+| 前缀 | $flex-ai-prefix |               ai |
+
+```scss
+$flex-ai-types: (
+    fs: flex-start,
+    fe: flex-end,
+    c: center,
+    s: stretch,
+    b: baseline
+) !default;
+```
 
 ## 弹性布局折行方式
 
@@ -81,11 +111,19 @@ title: 弹性布局
 
 ### 自定义
 
-| 类型     | 参数              |
-| :------- | :---------------- |
-| 开关     | $flex-wrap-switch |
-| 折行类型 | $flex-wrap-types  |
-| 前缀     | $flex-wrap-prefix |
+| 类型     | 参数              |           默认值 |
+| :------- | :---------------- | ---------------: |
+| 开关     | $flex-wrap-switch | 继承$flex-switch |
+| 折行类型 | $flex-wrap-types  |       见下图代码 |
+| 前缀     | $flex-wrap-prefix |               fw |
+
+```scss
+$flex-wrap-types: (
+    n: nowrap,
+    w: wrap,
+    wr: wrap-reverse
+) !default;
+```
 
 ## flex-grow 弹性盒子的扩展比率
 
@@ -99,12 +137,12 @@ title: 弹性布局
 
 ### 自定义
 
-| 类型            | 参数              |
-| :-------------- | :---------------- |
-| 开关            | $flex-grow-switch |
-| flex 默认 sizes | $flex-sizes       |
-| sizes           | $flex-grow-sizes  |
-| 前缀            | $flex-g           |
+| 类型            | 参数              |           默认值 |
+| :-------------- | :---------------- | ---------------: |
+| 开关            | $flex-grow-switch | 继承$flex-switch |
+| flex 默认 sizes | $flex-sizes       |    1, 2, 3, 4, 5 |
+| sizes           | $flex-grow-sizes  |  继承$flex-sizes |
+| 前缀            | $flex-g           |               fg |
 
 ::: tip
 $flex-grow-sizes和$flex-shrink-sizes 默认继承$flex-sizes 的值
@@ -122,11 +160,11 @@ $flex-grow-sizes和$flex-shrink-sizes 默认继承$flex-sizes 的值
 
 ### 自定义
 
-| 类型  | 参数                |
-| :---- | :------------------ |
-| 开关  | $flex-shrink-switch |
-| sizes | $flex-shrink-sizes  |
-| 前缀  | $flex-s             |
+| 类型  | 参数                |           默认值 |
+| :---- | :------------------ | ---------------: |
+| 开关  | $flex-shrink-switch | 继承$flex-switch |
+| sizes | $flex-shrink-sizes  |  继承$flex-sizes |
+| 前缀  | $flex-s             |               fs |
 
 ::: tip
 与上面的 fs 一样，这里 fs 这个前缀和 font-size 的 fs 一样，但并不影响我们正常使用

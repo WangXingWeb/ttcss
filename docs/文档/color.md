@@ -4,17 +4,17 @@ title: color
 
 ## 文本颜色
 
-| class            | style              |
-| :--------------- | :----------------- |
-| text-transparent | color:transparent; |
-| text-current     | color:currentColor |
-| text-primary     | color: #1890ff     |
-| text-success     | color: #52c41a     |
-| text-warnning    | color: #faad14     |
-| text-danger      | color: #f5222d     |
-| text-border      | color: #d9d9d9     |
-| text-white       | color: #ffffff     |
-| text-black       | color: #000000     |
+| class         | style              |
+| :------------ | :----------------- |
+| text-t        | color:transparent; |
+| text-c        | color:currentColor |
+| text-primary  | color: #1890ff     |
+| text-success  | color: #52c41a     |
+| text-warnning | color: #faad14     |
+| text-danger   | color: #f5222d     |
+| text-border   | color: #d9d9d9     |
+| text-white    | color: #ffffff     |
+| text-black    | color: #000000     |
 
 ### 自定义颜色
 
@@ -22,8 +22,8 @@ ttcss 支持自定义颜色，你可以根据自己的项目需求更改样式�
 
 ```scss
 $colors: (
-    transparent: transparent,
-    current: currentColor,
+    t: transparent,
+    c: currentColor,
     red: red,
     blue: blue
 );
@@ -74,8 +74,8 @@ $text-color-switch: false; //单独禁用文本颜色
 
 ```scss
 $colors: (
-    'transparent': transparent,
-    'current': currentColor,
+    't': transparent,
+    'c': currentColor,
     'primary': #1890ff,
     'success': #52c41a,
     'warnning': #faad14,
@@ -88,17 +88,17 @@ $colors: (
 
 ## 背景颜色
 
-| class          | style                         |
-| :------------- | :---------------------------- |
-| bg-transparent | background-color:transparent; |
-| bg-current     | background-color:currentColor |
-| bg-primary     | background-color: #1890ff     |
-| bg-success     | background-color: #52c41a     |
-| bg-warnning    | background-color: #faad14     |
-| bg-danger      | background-color: #f5222d     |
-| bg-border      | background-color: #d9d9d9     |
-| bg-white       | background-color: #ffffff     |
-| bg-black       | background-color: #000000     |
+| class       | style                         |
+| :---------- | :---------------------------- |
+| bg-t        | background-color:transparent; |
+| bg-c        | background-color:currentColor |
+| bg-primary  | background-color: #1890ff     |
+| bg-success  | background-color: #52c41a     |
+| bg-warnning | background-color: #faad14     |
+| bg-danger   | background-color: #f5222d     |
+| bg-border   | background-color: #d9d9d9     |
+| bg-white    | background-color: #ffffff     |
+| bg-black    | background-color: #000000     |
 
 ### 自定义
 
@@ -266,16 +266,16 @@ $opacify-color-switch 设置为 false 可以同时禁用透明度文本和背景
 
 下面表格只列举部分 class，其它的以此类推
 
-| class                 | style                                                  |
-| :-------------------- | :----------------------------------------------------- |
-| dark:text-transparent | .dark .dark:text-transparent{color:transparent;}       |
-| dark:text-primary     | .dark .dark:text-primary{color: #1890ff;}              |
-| dark:text-success     | .dark .dark:text-success{color: #52c41a;}              |
-| dark:bg-danger        | .dark .dark:bg-danger{background-color: #f5222d;}      |
-| dark:bg-white         | .dark .dark:bg-white{background-color: #ffffff;}       |
-| dark:bg-black         | .dark .dark:bg-black{background-color: #000000;}       |
-| dark:text-primary-80  | .dark .dark:text-primary-80{color:rgba(#1890ff, 80%);} |
-| dark:text-black-50    | .dark .dark:text-black-50 {color: rgba(#000000,50);}   |
+| class                | style                                                  |
+| :------------------- | :----------------------------------------------------- |
+| dark:text-t          | .dark .dark:text-transparent{color:transparent;}       |
+| dark:text-primary    | .dark .dark:text-primary{color: #1890ff;}              |
+| dark:text-success    | .dark .dark:text-success{color: #52c41a;}              |
+| dark:bg-danger       | .dark .dark:bg-danger{background-color: #f5222d;}      |
+| dark:bg-white        | .dark .dark:bg-white{background-color: #ffffff;}       |
+| dark:bg-black        | .dark .dark:bg-black{background-color: #000000;}       |
+| dark:text-primary-80 | .dark .dark:text-primary-80{color:rgba(#1890ff, 80%);} |
+| dark:text-black-50   | .dark .dark:text-black-50 {color: rgba(#000000,50);}   |
 
 ### dark 变体被占用处理
 
