@@ -1,5 +1,5 @@
 <template>
-    <div class="about box-border mt-5">
+    <div class="about border-b mt-5">
         <h1 class="mt--1 fs-xl td-overline bg-blue-20 ta-left">This is an about page</h1>
         <table style="width: 100%">
             <thead>
@@ -15,25 +15,24 @@
             kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷ jfkslfjkasjf;lkdlskfjkldsjjk kjlkdjsfjdskf fkdsjf;l的撒娇凤莲倒海翻江是否÷
         </div>
 
-        <div style="width:120px;"  class="d-flex">
-            <div style="width:100px;" class="flex-s-1 bg-red">ddd</div>
-            <div style="width:100px;" class="flex-s-2 bg-blue">eee</div>
+        <div style="width: 120px" class="d-flex">
+            <div style="width: 100px" class="flex-s-1 bg-red">ddd</div>
+            <div style="width: 100px" class="flex-s-2 bg-blue">eee</div>
         </div>
-        <div style="width:100px;height:100px;" class="bg-red br-3 cursor-help">ddd</div>
+        <div style="width: 100px; height: 100px" class="bg-red br-3 cursor-help">ddd</div>
     </div>
 </template>
 <script>
-
-export default{
-    methods:{
-        fun(){
-            console.log('','');
-            
+export default {
+    methods: {
+        fun() {
+            console.log('', '')
         }
     }
-}</script>
+}
+</script>
 <style lang="scss">
 .test {
     background-color: rgba(#000000, 40%);
 }
-</styl>
+</style>

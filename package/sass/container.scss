@@ -21,12 +21,12 @@
 @include eachMixin($cursor-switch, $cursor-types, $cursor-prefix, cursor);
 
 //边框border
-.border-a {
+.#{$border-prefix}-a {
     border: 1px solid $borderColor;
 }
-@each $directionKey, $direction in $directions {
-    .border-#{$directionKey} {
-        border-#{$direction}: 1px solid $borderColor;
+@each $directionKey, $direction in $border-directions {
+    .#{$border-prefix}-#{$directionKey} {
+        #{$border-prefix}-#{$direction}: 1px solid $borderColor;
     }
 }
 

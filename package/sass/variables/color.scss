@@ -12,10 +12,7 @@ $colors: (
 ) !default;
 
 //边框颜色(从$colors中取)
-$borderColor: map-get(
-    $map: $colors,
-    $key: 'border'
-) !default;
+$borderColor: map-get($colors, border) !default;
 
 //透明度
 $opacify-types: 10, 20, 30, 40, 50, 60, 70, 80, 90 !default;

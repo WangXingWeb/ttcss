@@ -1,18 +1,31 @@
 //盒模型
 $box-types: (
-    content: content-box,
-    border: border-box
+    c: content-box,
+    b: border-box
 ) !default;
 $box-switch: true !default; //盒模型开关
 $box-prefix: box !default; //盒模型前缀
 
-//display
-$display-types: none, flex, grid, block, inline, inline-block, inherit !default; //display类型
+//display类型
+$display-types: (
+    n: none,
+    f: flex,
+    g: grid,
+    b: block,
+    i: inline,
+    ib: inline-block
+) !default;
 $display-switch: true !default; //display开关
 $display-prefix: d !default; //display前缀
 
 //定位 postion
-$postion-types: absolute, relative, fixed, static, inherit, sticky !default;
+$postion-types: (
+    a: absolute,
+    r: relative,
+    f: fixed,
+    sta: static,
+    sti: sticky
+) !default;
 $postion-switch: true !default; //postion开关
 $postion-prefix: p !default; //postion前缀
 
@@ -31,11 +44,28 @@ $raduis-base-size: 1px !default;
 $raduis-prefix: br !default;
 
 //鼠标指针样式
-$cursor-types: pointer, crosshair, text, default, help !default;
+$cursor-types: (
+    p: pointer,
+    c: crosshair,
+    t: text,
+    d: default,
+    h: help
+) !default;
 $cursor-switch: true !default; //border-raduis开关
-$cursor-prefix: cursor !default;
+$cursor-prefix: c !default;
 
 //溢出
 $overflow-switch: true !default;
-$overflow-types: visible, hidden, scroll, auto !default;
+$overflow-types: (
+    v: visible,
+    h: hidden,
+    s: scroll,
+    a: auto
+) !default;
 $overflow-directions: x, y !default;
+$overflow-prefix: o !default;
+
+//border
+$border-switch: true !default;
+$border-prefix: border !default;
+$border-directions: $directions !default;

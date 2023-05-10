@@ -5,28 +5,28 @@
     @each $sizeKey, $size in $spacing-sizes {
         // .m-1 .p-4
         .#{$typeKey}-#{$sizeKey} {
-            #{$type}: $size * $spacing-base-size;
+            #{$type}: $size * $spacing-base-size !important;
         }
     }
     @each $sizeKey, $size in $spacing-sizes {
         // .px-6 .mx-4  x 代表水平方向
         .#{$typeKey}x-#{$sizeKey} {
-            #{$type}-left: $size * $spacing-base-size;
-            #{$type}-right: $size * $spacing-base-size;
+            #{$type}-left: $size * $spacing-base-size !important;
+            #{$type}-right: $size * $spacing-base-size !important;
         }
     }
     @each $sizeKey, $size in $spacing-sizes {
         // .py-6 .my-4  y 代表竖直方向
         .#{$typeKey}y-#{$sizeKey} {
-            #{$type}-top: $size * $spacing-base-size;
-            #{$type}-bottom: $size * $spacing-base-size;
+            #{$type}-top: $size * $spacing-base-size !important;
+            #{$type}-bottom: $size * $spacing-base-size !important;
         }
     }
     @each $directionKey, $direction in $spacing-directions {
         @each $sizeKey, $size in $spacing-sizes {
             // .mt-2 .pb-5 .mr-3 .pl-5
             .#{$typeKey}#{$directionKey}-#{$sizeKey} {
-                #{$type}-#{$direction}: $size * $spacing-base-size;
+                #{$type}-#{$direction}: $size * $spacing-base-size !important;
             }
         }
     }
